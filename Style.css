@@ -1,69 +1,108 @@
 body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-    }
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f1f1f1;
+}
 
-    h1 {
-      text-align: center;
-    }
+header {
+  background-color: #FFA500; /* Orange */
+  color: #000; /* Black */
+  padding: 20px;
+  text-align: center;
+}
 
-    #loginForm {
-      max-width: 400px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      padding: 20px;
-    }
+h1 {
+  margin: 0;
+}
 
-    label {
-      display: block;
-      margin-bottom: 10px;
-    }
+.designer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+}
 
-    input {
-      width: 100%;
-      padding: 5px;
-      margin-bottom: 15px;
-    }
+.shirt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 30px;
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
 
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #007bff;
-      color: #fff;
-      border: none;
-      cursor: pointer;
-    }
+.shirt-front,
+.shirt-back {
+  width: 200px;
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+}
 
-    .dashboard {
-      max-width: 800px;
-      margin: 0 auto;
-      border: 1px solid #ccc;
-      padding: 20px;
-    }
+.options {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+}
 
-    .thought {
-      margin-bottom: 15px;
-    }
+h2 {
+  margin: 0 0 10px;
+}
 
-    .student {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      margin-bottom: 10px;
-    }
+h3 {
+  margin: 10px 0;
+}
 
-    .student label {
-      margin-right: 10px;
-    }
+label {
+  display: block;
+  margin-bottom: 5px;
+}
 
-    .report {
-      margin-top: 20px;
-      border-collapse: collapse;
-      width: 100%;
-    }
+input[type="number"],
+select {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+}
 
-    .report th,
-    .report td {
-      border: 1px solid #ccc;
-      padding: 8px;
-      text-align: center;
-    }
+input[type="color"] {
+  width: 50px;
+  height: 30px;
+  padding: 0;
+  margin-bottom: 10px;
+}
+
+#showBackButton {
+  background-color: #007bff; /* Blue */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+/* Additional styles for showing back design */
+.shirt-back {
+  display: none;
+}
+
+.show-back .shirt-back {
+  display: flex;
+}
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+  .designer-container {
+    flex-direction: column;
+  }
+
+  .shirt {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+}
